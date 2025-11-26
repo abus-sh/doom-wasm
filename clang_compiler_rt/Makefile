@@ -1,5 +1,5 @@
 CC=clang
-AR=llvm-ar-10
+AR=llvm-ar-19
 
 CFLAGS=--target=wasm32 -m32 -O2 -Wall -nostdlib -ffreestanding -nostdinc -I../musl-1.2.2/built_inc/include/
 
