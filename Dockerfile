@@ -9,10 +9,6 @@ RUN apt-get update && \
     clang-19 \
     make \
     rustup
-#RUN apt install -y binaryen
-#RUN apt install -y clang-19
-#RUN apt install -y make
-#RUN apt install -y rustup
 
 # Based on https://github.com/andizimmerer/docker-rust-wasm/blob/master/Dockerfile
 RUN rustup update && \
