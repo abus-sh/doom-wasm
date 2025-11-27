@@ -7,7 +7,7 @@ doom.wasm: src/*.rs clang_compiler_rt/* linuxdoom-1.10/*  musl-1.2.2/*
 	 wasm-opt -O3 -o doom.wasm ${BUILDDIR}/doom.wasm
 
 run_wasm: doom.wasm
-	python3 -m http.server --bind 127.0.0.1
+	python3 -m http.server --bind 0.0.0.0
 
 clean:
 	cargo clean
