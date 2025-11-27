@@ -78,6 +78,16 @@ WebAssembly.instantiateStreaming(fetch('doom.wasm'), importObject)
     let doomKeyCode = function(keyCode) {
         // Doom seems to use mostly the same keycodes, except for the following (maybe I'm missing a few.)
         switch (keyCode) {
+        // Custom remapping for Vizio remote
+        // Rebind ok/enter to ctrl/fire
+        case 13:
+            return (0x80+0x1d);
+        // Rebind back/backspace to space/open
+        case 8:
+            return 32;
+        // Rebind exit/escape to confirm/enter
+        case 27:
+            return 13;
         case 8:
             return 127; // KEY_BACKSPACE
         case 17:
